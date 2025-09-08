@@ -28,5 +28,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     DeviceProduct=devon_g
 
 # Axion Flags
-TARGET_ENABLE_BLUR := true
-AXION_MAINTAINER := Kshitij
+# TARGET_ENABLE_BLUR := true
+# AXION_MAINTAINER := Kshitij
