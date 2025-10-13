@@ -27,6 +27,9 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildFingerprint=motorola/devon_g/devon:13/T2SNS33.73-22-3-15/f9ee6-5bd7d:user/release-keys \
     DeviceProduct=devon_g
 
+# GApps
+WITH_GMS := true
+
 # Axion Flags
 TARGET_ENABLE_BLUR := false
 
@@ -40,4 +43,4 @@ AXION_MAINTAINER := Kshitij_:)
 # Processor name (underscores become spaces)
 AXION_PROCESSOR := Snapdragon_680_4G
 
-TARGET_INCLUDES_LOS_PREBUILTS := true
+TARGET_INCLUDES_LOS_PREBUILTS := false
