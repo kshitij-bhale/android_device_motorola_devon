@@ -1,5 +1,5 @@
 #
-# SPDX-FileCopyrightText: 2022-2024 The LineageOS Project
+# SPDX-FileCopyrightText: The LineageOS Project
 # SPDX-License-Identifier: Apache-2.0
 #
 
@@ -27,8 +27,9 @@ TARGET_SCREEN_WIDTH := 1080
 # Init
 PRODUCT_PACKAGES += \
     fstab.qcom \
+    init.mmi.overlay.rc \
     init.oem.fingerprint2.sh \
-    init.mmi.overlay.rc
+    init.vendor.st21nfc.rc
 
 # Moto Camera 4
 TARGET_MOTCAMERA4 := devon
@@ -41,11 +42,13 @@ $(call soong_config_set,livedisplay_sysfs,enable_ab,true)
 
 # NFC
 PRODUCT_PACKAGES += \
-    android.hardware.nfc@1.2-service.st
+    android.hardware.nfc-service.st
 
 # Overlay
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay
+PRODUCT_PACKAGES += \
+    FrameworksResDevice \
+    SystemUIResDevice \
+    WifiResDevice
 
 # Permissions
 PRODUCT_COPY_FILES += \
